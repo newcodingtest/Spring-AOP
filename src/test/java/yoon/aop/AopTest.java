@@ -7,11 +7,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 import yoon.aop.order.OrderRepository;
 import yoon.aop.order.OrderService;
+import yoon.aop.order.aop.AspectV1;
 
 @Slf4j
 @SpringBootTest
+@Import(AspectV1.class)
 public class AopTest {
 
     @Autowired
